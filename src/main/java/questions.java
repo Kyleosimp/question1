@@ -156,22 +156,9 @@ public class questions {
      *
      * output = The 7@rmer went to the $tore to get ! doll@r'$ worth o7 7ertilizer
      */
-
     public static String replaceCharacters(String str) {
-        for (int i = 0; i < str.length();){
-            if (str.charAt(i)=='f' || str.charAt(i)=='F') {
-                str = str.substring(0,i)+'7'+str.substring(++i);
-            }else if (str.charAt(i) == 's'||str.charAt(i) == 'S') {
-                str = str.substring(0, i) + '$' + str.substring(i++);
-            }else if (str.charAt(i) == '1')
-            str = str.substring(0, i) + '!' + str.substring(i++);
-            else if (str.charAt(i) == 'a'||str.charAt(i) == 'A') {
-                str = str.substring(0, i) + '@' + str.substring(i++);
-            }else {i++;
-                }
-            }
-
-        return null;
+        String newStringf = str.replace('f', '7').replace('s', '$').replace('1', '!').replace('a', '@');
+        return newStringf;
 
     }
 
@@ -215,7 +202,7 @@ public class questions {
 ////        //Response 11
 ////        getIndexByElement(nameList);
 //        //Response 13
-        printOddNumbersInRange(myAge, favoriteNumber);
+//        printOddNumbersInRange(myAge, favoriteNumber);
 //        //Response 14
 //        System.out.println(printGivenStringTimesNumberGiven(myName, favoriteNumber));
         //Response 15
@@ -225,7 +212,7 @@ public class questions {
 //        //Response 17
 //        swap(foodMenu);
 //        //Response 18
-//        replaceCharacters(farmer);
+        System.out.println(replaceCharacters(farmer));
 
 
 
